@@ -1,8 +1,8 @@
 <script setup>
 const steps = [
   {
-    title: 'Sketch',
-    body: 'Every putter starts as a pencil drawing on the bench. Shape, weight, sightline — all worked out by hand first.',
+    title: 'Design',
+    body: 'Every putter starts as a conversation with the guy actually making your club start to finish. Shape, weight, sightline, neck — all worked out before we start.',
     icon: 'M10 38 L34 14 L40 20 L16 44 L8 46 Z M30 18 L36 24',
   },
   {

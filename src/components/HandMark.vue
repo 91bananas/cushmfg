@@ -58,7 +58,7 @@ const shape = shapes[props.type]
 
 .hand-mark--underline {
   position: absolute;
-  left: -3%;
+  left: 44%;
   width: 106%;
   bottom: -0.18em;
   height: 0.32em;

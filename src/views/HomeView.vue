@@ -13,7 +13,7 @@ const accessories = computed(() =>
 )
 const hero = products[0]
 
-const ticker = ['Milled by hand', 'One at a time', 'Garage built', 'Sketched in pencil', 'Rolled on real greens']
+const ticker = ['Milled by hand', 'Garage built', 'Pairs well with Ramen', 'One at a time', 'Rolled on real greens', 'Will increase SAT scores.', 'As strong as an F3 tornado']
 </script>
 
 <template>
@@ -21,7 +21,6 @@ const ticker = ['Milled by hand', 'One at a time', 'Garage built', 'Sketched in 
   <section class="hero">
     <div class="wrap hero__grid">
       <div class="hero__copy">
-        <span class="eyebrow">Custom putters · Est. in a garage</span>
         <h1>
           Putters made
           <span class="marked">by hand.<HandMark type="underline" /></span>
@@ -68,7 +67,6 @@ const ticker = ['Milled by hand', 'One at a time', 'Garage built', 'Sketched in 
           <span class="eyebrow">The lineup</span>
           <h2>Putters</h2>
         </div>
-        <p class="hand-note section-head__note">hover one to see the original sketch ↓</p>
       </div>
       <div class="grid">
         <ProductCard v-for="(p, i) in putters" :key="p.slug" :product="p" :index="i" />
@@ -146,7 +144,7 @@ const ticker = ['Milled by hand', 'One at a time', 'Garage built', 'Sketched in 
 
 <style scoped>
 .hero {
-  padding: clamp(48px, 8vw, 96px) 0 clamp(56px, 8vw, 88px);
+  padding: clamp(48px, 8vw, 46px) 0 clamp(56px, 8vw, 88px);
 }
 
 .hero__grid {
