@@ -5,6 +5,7 @@ import HandMark from '@/components/HandMark.vue'
 import ProductSketch from '@/components/ProductSketch.vue'
 import { products, getProduct } from '@/data/products'
 import { site } from '@/data/site'
+import { asset } from '@/utils/asset'
 
 const route = useRoute()
 const preset = getProduct(route.query.model)
@@ -51,24 +52,24 @@ function submit() {
         <span class="eyebrow">Custom order</span>
         <h1>
           Let's build
-          <span class="marked">yours.<HandMark type="circle" /></span>
+          <span class="marked">yours.
+            <HandMark type="circle" />
+          </span>
         </h1>
         <p class="lede">
-          Tell me what you're after. I'll sketch it up and send it to you for a thumbs-up
+          Have an insane idea? Tell me what you're after. I'll sketch it up and send it to you for a thumbs-up
           before anything gets cut.
         </p>
         <ol class="how hand">
           <li>You fill this out</li>
-          <li>I send you a sketch</li>
-          <li>We tweak it till it's right</li>
+          <li>We have a design conversation</li>
+          <li>I tweak it till it's right</li>
           <li>I build it — about {{ site.leadTime }}</li>
         </ol>
         <div class="custom__sketch taped">
-          <ProductSketch
-            :kind="getProduct(form.model)?.sketchKind ?? 'blade'"
-            :src="getProduct(form.model)?.sketch"
-            alt="Sketch of the selected model"
-          />
+          <ProductSketch :kind="getProduct(form.model)?.sketchKind ?? 'blade'"
+            :src="asset(getProduct(form.model)?.sketch || 'images/products/c-and-c/candc12.webp')"
+            alt="Sketch of the selected model" />
         </div>
       </div>
 
@@ -201,7 +202,7 @@ function submit() {
   gap: 16px;
 }
 
-label > span,
+label>span,
 legend {
   display: block;
   margin-bottom: 6px;
@@ -273,12 +274,12 @@ textarea:focus {
   background: var(--paper-2);
 }
 
-.chip input:checked + span {
+.chip input:checked+span {
   background: var(--ink);
   color: var(--paper);
 }
 
-.chip input:focus-visible + span {
+.chip input:focus-visible+span {
   outline: 2px dashed var(--marker);
   outline-offset: 3px;
 }

@@ -1,10 +1,11 @@
 <script setup>
 import { site } from '@/data/site'
+import { asset } from '@/utils/asset'
 </script>
 
 <template>
   <RouterLink to="/" class="logo" :aria-label="`${site.name} home`">
-    <img v-if="site.logo" :src="site.logo" :alt="site.name" />
+    <img v-if="site.logo" :src="asset(site.logo)" :alt="site.name" />
     <template v-else>
       <span class="logo__mark hand">{{ site.name }}</span>
       <svg class="logo__ring" viewBox="0 0 120 60" aria-hidden="true">

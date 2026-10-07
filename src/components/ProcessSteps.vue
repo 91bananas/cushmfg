@@ -7,7 +7,7 @@ const steps = [
   },
   {
     title: 'Mill',
-    body: 'The head is cut from a solid block of metal, one at a time. No casting, no batches.',
+    body: 'The head is cut from a solid block of metal, one at a time. No casting, no waiting on orders from Chyyna.',
     icon: 'M14 10 h20 v8 h-20 z M24 18 v10 M18 28 h12 l-2 10 h-8 z M6 44 h36',
   },
   {
@@ -17,7 +17,7 @@ const steps = [
   },
   {
     title: 'Roll',
-    body: 'Each one gets tested on the practice green out back before it ships to you.',
+    body: 'Each one gets tested on the practice green before it ships to you.',
     icon: 'M8 36 Q24 30 40 36 M30 26 a5 5 0 1 0 0.1 0 M10 36 v-24 l10 4 l-10 4',
   },
 ]
@@ -29,15 +29,8 @@ const steps = [
       <div class="step__head">
         <span class="step__num hand">{{ i + 1 }}</span>
         <svg class="step__icon" viewBox="0 0 48 48" aria-hidden="true">
-          <path
-            :d="s.icon"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            filter="url(#rough)"
-          />
+          <path :d="s.icon" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+            stroke-linejoin="round" filter="url(#rough)" />
         </svg>
       </div>
       <h3>{{ s.title }}</h3>

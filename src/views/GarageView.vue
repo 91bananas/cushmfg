@@ -12,16 +12,18 @@ const tools = [
 </script>
 
 <template>
-  <section class="section">
+  <section class="section pb-40">
     <div class="wrap intro">
       <span class="eyebrow">The garage</span>
       <h1>
         One garage. One bench.
-        <span class="marked">Two hands.<HandMark type="underline" /></span>
+        <span class="marked">Two hands.
+          <HandMark type="underline" />
+        </span>
       </h1>
       <p class="lede">
-        No factory, no outsourcing. Every putter is drawn, cut, finished and tested in the
-        same one-car garage. Here's how that started.
+        No factory, no underpayed employees who don't care. Every putter is drawn, cut, finished and tested in the
+        same one-car garage by the same guy. Here's how that started:
       </p>
     </div>
   </section>
@@ -30,13 +32,14 @@ const tools = [
     <PhotoFrame class="story__photo taped" label="Garage photo" alt="The garage workshop" />
     <div class="story__text">
       <p>
-        <span class="hand dropcap">I</span>t started the way most garage projects do: I wanted
+        <span class="hand dropcap">T</span> he way most garage projects do: I wanted
         something I couldn't afford, so I spent thousands of dollars outfitting a shop to build putters. I bought an old
         Bridgeport mill at auction, and spent way too many nights and weekends figuring it out.
       </p>
       <p>
         That first putter is still in my collection. The next few went to friends. Somewhere along the
-        way, random people on the internet started asking if I'd make one for them too. I've since shipped golf clubs all around the world.
+        way, random people on the internet started asking if I'd make one for them too. I've since shipped golf clubs
+        all around the world.
       </p>
       <p>
         Today it's still just me in the garage. Tinkering away, trying to put my spin on every item that leaves my shop.
@@ -97,6 +100,10 @@ const tools = [
 
 .story__text {
   font-size: 1.1rem;
+}
+
+.pb-40 {
+  padding-bottom: 40px;
 }
 
 .dropcap {

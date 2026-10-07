@@ -26,21 +26,17 @@ function select(id) {
       <span class="eyebrow">The shop</span>
       <h1>
         Everything on the
-        <span class="marked">bench<HandMark type="underline" /></span>
+        <span class="marked">bench
+          <HandMark type="underline" />
+        </span>
       </h1>
       <p class="lede">
         Every piece is made to order. Pick one out, or start from scratch with a custom build.
       </p>
 
       <div class="filters" role="tablist" aria-label="Filter products">
-        <button
-          v-for="c in categories"
-          :key="c.id"
-          role="tab"
-          :aria-selected="active === c.id"
-          :class="['filter', { 'is-active': active === c.id }]"
-          @click="select(c.id)"
-        >
+        <button v-for="c in categories" :key="c.id" role="tab" :aria-selected="active === c.id"
+          :class="['filter', { 'is-active': active === c.id }]" @click="select(c.id)">
           {{ c.label }}
         </button>
       </div>
@@ -55,6 +51,10 @@ function select(id) {
 <style scoped>
 .shop h1 {
   font-size: clamp(2.4rem, 6vw, 4.2rem);
+}
+
+.shop .hand-mark {
+  left: 4%;
 }
 
 .filters {

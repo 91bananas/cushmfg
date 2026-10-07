@@ -12,6 +12,7 @@ const router = createRouter({
       component: () => import('@/views/ProductView.vue'),
       props: true,
     },
+    { path: '/gallery', name: 'gallery', component: () => import('@/views/GalleryView.vue') },
     { path: '/garage', name: 'garage', component: () => import('@/views/GarageView.vue') },
     { path: '/custom', name: 'custom', component: () => import('@/views/CustomView.vue') },
     {

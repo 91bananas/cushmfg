@@ -9,6 +9,7 @@ watch(() => route.fullPath, () => (open.value = false))
 
 const links = [
   { to: '/shop', label: 'Shop' },
+  { to: '/gallery', label: 'Gallery' },
   { to: '/garage', label: 'The Garage' },
 ]
 </script>

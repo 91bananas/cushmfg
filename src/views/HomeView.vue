@@ -6,6 +6,7 @@ import ProductSketch from '@/components/ProductSketch.vue'
 import PhotoFrame from '@/components/PhotoFrame.vue'
 import ProcessSteps from '@/components/ProcessSteps.vue'
 import { products } from '@/data/products'
+import { asset } from '@/utils/asset'
 
 const putters = computed(() => products.filter((p) => p.category === 'putter' && p.featured))
 const accessories = computed(() =>
@@ -38,7 +39,7 @@ const ticker = ['Milled by hand', 'Garage built', 'Pairs well with Ramen', 'One 
 
       <div class="hero__art">
         <div class="hero__paper taped">
-          <ProductSketch :src="hero.sketch" :kind="hero.sketchKind" :alt="`Sketch of the ${hero.name}`" />
+          <ProductSketch :src="asset(hero.sketch)" :kind="hero.sketchKind" :alt="`Sketch of the ${hero.name}`" />
         </div>
         <div class="hero__callout">
           <HandMark type="arrow" :delay="1" />

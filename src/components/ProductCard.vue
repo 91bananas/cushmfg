@@ -2,6 +2,7 @@
 import PhotoFrame from './PhotoFrame.vue'
 import ProductSketch from './ProductSketch.vue'
 import { formatPrice } from '@/data/products'
+import { asset } from '@/utils/asset'
 
 defineProps({
   product: { type: Object, required: true },
@@ -14,13 +15,13 @@ defineProps({
     <div class="card__media">
       <PhotoFrame
         class="card__photo"
-        :src="product.image"
+        :src="asset(product.image)"
         :alt="product.name"
         :label="product.name"
       />
       <!-- the hand-drawn sketch slides over the photo on hover -->
       <div class="card__sketch">
-        <ProductSketch :src="product.sketch" :kind="product.sketchKind" :alt="`Sketch of ${product.name}`" />
+        <ProductSketch :src="asset(product.sketch)" :kind="product.sketchKind" :alt="`Sketch of ${product.name}`" />
         <span class="card__sketch-label hand">the original sketch</span>
       </div>
       <span class="card__num hand">No. {{ String(index + 1).padStart(2, '0') }}</span>

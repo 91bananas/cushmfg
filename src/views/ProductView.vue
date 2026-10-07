@@ -6,6 +6,7 @@ import ProductCard from '@/components/ProductCard.vue'
 import NotFoundView from './NotFoundView.vue'
 import { products, getProduct, formatPrice } from '@/data/products'
 import { site } from '@/data/site'
+import { asset } from '@/utils/asset'
 
 const props = defineProps({ slug: { type: String, required: true } })
 
@@ -34,13 +35,13 @@ const related = computed(() =>
           <div class="product__media">
             <PhotoFrame
               class="product__photo sketch-border"
-              :src="product.image"
+              :src="asset(product.image)"
               :alt="product.name"
               :label="`Photo of the ${product.name}`"
             />
             <div class="product__sketch taped">
               <ProductSketch
-                :src="product.sketch"
+                :src="asset(product.sketch)"
                 :kind="product.sketchKind"
                 :alt="`Original hand-drawn sketch of the ${product.name}`"
                 :note="product.note"

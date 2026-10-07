@@ -17,6 +17,7 @@ const year = new Date().getFullYear()
         <span class="eyebrow">Shop</span>
         <RouterLink to="/shop?c=putter">Putters</RouterLink>
         <RouterLink to="/shop?c=accessory">Accessories</RouterLink>
+        <RouterLink to="/gallery">Gallery</RouterLink>
         <RouterLink to="/custom">Custom order</RouterLink>
       </nav>
       <div class="footer__col">
